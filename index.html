@@ -1,20 +1,382 @@
-<p class="subtitle">
-    Small steps every day. Big results someday.
-</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>NEET Life OS</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
 
 
-<div class="progress-section">
+<body>
 
-    <div class="progress-text">
-        <span id="progress-text">Today's Progress: 0 / 6</span>
-        <span id="progress-percent">0%</span>
-    </div>
+    <main class="container">
 
-    <div class="progress-bar">
-        <div id="progress-fill"></div>
-    </div>
+        <!-- HEADER -->
 
-</div>
+        <section class="hero">
+
+            <p class="tag">
+                ✨ MY NEET 2027 JOURNEY
+            </p>
+
+            <h1>
+                One day closer<br>
+                to the dream 🌷
+            </h1>
+
+            <p class="subtitle">
+                Your personal study system.
+                Built one disciplined day at a time.
+            </p>
+
+            <p id="today-date" class="date">
+                Loading date...
+            </p>
+
+        </section>
 
 
-<div class="habit-box">
+        <!-- TOP STATS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span>🔥</span>
+                <p>STREAK</p>
+                <h2 id="streak">0 Days</h2>
+            </div>
+
+
+            <div class="stat-card">
+                <span>📊</span>
+                <p>PROGRESS</p>
+                <h2 id="progress-percent">0%</h2>
+            </div>
+
+
+            <div class="stat-card">
+                <span>🎯</span>
+                <p>NEET COUNTDOWN</p>
+                <h2 id="countdown">-- Days</h2>
+            </div>
+
+        </section>
+
+
+        <!-- DAILY PROGRESS -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <h2>Today's Progress</h2>
+
+                <span id="progress-text">
+                    0 / 0 completed
+                </span>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div id="progress-fill">
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STUDY STATS -->
+
+        <section class="card">
+
+            <h2>Today's Study 📚</h2>
+
+            <div class="input-grid">
+
+                <div class="input-card">
+
+                    <label>
+                        ⚛️ Physics Hours
+                    </label>
+
+                    <input
+                        type="number"
+                        id="physics-hours"
+                        min="0"
+                        step="0.5"
+                        placeholder="0"
+                    >
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <label>
+                        🧪 Chemistry Hours
+                    </label>
+
+                    <input
+                        type="number"
+                        id="chemistry-hours"
+                        min="0"
+                        step="0.5"
+                        placeholder="0"
+                    >
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <label>
+                        🧬 Biology Hours
+                    </label>
+
+                    <input
+                        type="number"
+                        id="biology-hours"
+                        min="0"
+                        step="0.5"
+                        placeholder="0"
+                    >
+
+                </div>
+
+
+                <div class="input-card">
+
+                    <label>
+                        📝 Questions Solved
+                    </label>
+
+                    <input
+                        type="number"
+                        id="questions"
+                        min="0"
+                        placeholder="0"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="study-summary">
+
+                <div>
+
+                    <p>Total Study Time</p>
+
+                    <h2 id="total-hours">
+                        0 Hours
+                    </h2>
+
+                </div>
+
+
+                <div>
+
+                    <p>Total Questions</p>
+
+                    <h2 id="total-questions">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DAILY HABITS -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <h2>
+                    🔁 Daily Habits
+                </h2>
+
+                <span>
+                    Repeat every day
+                </span>
+
+            </div>
+
+
+            <div
+                id="daily-habit-list"
+                class="habit-list"
+            >
+
+            </div>
+
+        </section>
+
+
+        <!-- TODAY TASKS -->
+
+        <section class="card">
+
+            <div class="section-heading">
+
+                <h2>
+                    🎯 Today's Tasks
+                </h2>
+
+                <span>
+                    Custom for today
+                </span>
+
+            </div>
+
+
+            <div class="add-section">
+
+                <input
+                    type="text"
+                    id="task-input"
+                    placeholder="Example: Finish Ray Optics PYQs"
+                >
+
+                <button id="add-task-button">
+
+                    + Add
+
+                </button>
+
+            </div>
+
+
+            <div
+                id="task-list"
+                class="habit-list"
+            >
+
+            </div>
+
+        </section>
+
+
+        <!-- SUBJECT PROGRESS -->
+
+        <section class="card">
+
+            <h2>
+                Subject Focus 📈
+            </h2>
+
+
+            <div class="subject">
+
+                <div class="subject-header">
+
+                    <span>
+                        ⚛️ Physics
+                    </span>
+
+                    <span id="physics-display">
+                        0h
+                    </span>
+
+                </div>
+
+                <div class="mini-progress">
+
+                    <div
+                        id="physics-bar"
+                    >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="subject">
+
+                <div class="subject-header">
+
+                    <span>
+                        🧪 Chemistry
+                    </span>
+
+                    <span id="chemistry-display">
+                        0h
+                    </span>
+
+                </div>
+
+                <div class="mini-progress">
+
+                    <div
+                        id="chemistry-bar"
+                    >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="subject">
+
+                <div class="subject-header">
+
+                    <span>
+                        🧬 Biology
+                    </span>
+
+                    <span id="biology-display">
+                        0h
+                    </span>
+
+                </div>
+
+                <div class="mini-progress">
+
+                    <div
+                        id="biology-bar"
+                    >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            Built quietly.
+            Used daily.
+            Improved endlessly. 🌙
+
+        </footer>
+
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+                                </html>
