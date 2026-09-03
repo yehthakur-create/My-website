@@ -1,34 +1,589 @@
-.progress-section {
-    margin-bottom: 25px;
+* {
+    box-sizing: border-box;
 }
 
-.progress-text {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8f4ef,
+            #eee9f4
+        );
+
+    color: #29262d;
+
+    min-height: 100vh;
+}
+
+
+.container {
+
+    width: min(
+        900px,
+        92%
+    );
+
+    margin: auto;
+
+    padding:
+        55px 0;
+
+}
+
+
+/* HERO */
+
+.hero {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.tag {
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    color: #8d7484;
+
+}
+
+
+h1 {
+
+    font-size:
+        clamp(
+            38px,
+            7vw,
+            65px
+        );
+
+    line-height: 1.1;
+
+    margin:
+        18px 0;
+
+}
+
+
+.subtitle {
+
+    color: #777;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+}
+
+
+.date {
 
     font-size: 14px;
-    color: #666;
+
+    color: #888;
+
 }
 
-.progress-bar {
-    width: 100%;
-    height: 10px;
 
-    background: rgba(255, 255, 255, 0.7);
+/* CARDS */
+
+.card {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.72
+        );
+
+    backdrop-filter:
+        blur(10px);
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.6
+        );
+
+    border-radius: 22px;
+
+    padding: 25px;
+
+    margin-bottom: 22px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(
+            0,
+            0,
+            0,
+            0.04
+        );
+
+}
+
+
+/* STATS */
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.stat-card {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.75
+        );
+
+    padding: 22px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+}
+
+
+.stat-card span {
+
+    font-size: 24px;
+
+}
+
+
+.stat-card p {
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    color: #888;
+
+}
+
+
+.stat-card h2 {
+
+    margin: 8px 0 0;
+
+    font-size: 20px;
+
+}
+
+
+/* HEADINGS */
+
+.section-heading {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    margin-bottom: 18px;
+
+}
+
+
+.section-heading h2 {
+
+    margin: 0;
+
+}
+
+
+.section-heading span {
+
+    font-size: 12px;
+
+    color: #888;
+
+}
+
+
+/* PROGRESS */
+
+.progress-bar {
+
+    width: 100%;
+
+    height: 12px;
+
+    background: #eee;
 
     border-radius: 20px;
 
     overflow: hidden;
+
 }
 
-#progress-fill {
-    height: 100%;
-    width: 0%;
 
-    background: linear-gradient(90deg, #ff9a9e, #fecfef);
+#progress-fill {
+
+    height: 100%;
+
+    width: 0%;
 
     border-radius: 20px;
 
-    transition: width 0.4s ease;
+    background:
+        linear-gradient(
+            90deg,
+            #f4a7a7,
+            #c9a7e8
+        );
+
+    transition:
+        width 0.4s ease;
+
+}
+
+
+/* INPUTS */
+
+.input-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            1fr
+        );
+
+    gap: 15px;
+
+}
+
+
+.input-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+label {
+
+    font-size: 14px;
+
+}
+
+
+input {
+
+    border:
+        1px solid #eee;
+
+    border-radius: 12px;
+
+    padding: 13px;
+
+    font-size: 15px;
+
+    outline: none;
+
+}
+
+
+input:focus {
+
+    border-color:
+        #c9a7e8;
+
+}
+
+
+.study-summary {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            1fr
+        );
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+}
+
+
+.study-summary div {
+
+    background: #f8f6f8;
+
+    padding: 18px;
+
+    border-radius: 15px;
+
+}
+
+
+.study-summary p {
+
+    font-size: 12px;
+
+    color: #888;
+
+    margin: 0;
+
+}
+
+
+.study-summary h2 {
+
+    margin: 8px 0 0;
+
+}
+
+
+/* HABITS */
+
+.habit-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.habit {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 16px;
+
+    border-radius: 15px;
+
+    background: #f8f6f8;
+
+}
+
+
+.habit span {
+
+    flex: 1;
+
+}
+
+
+.habit input {
+
+    width: 20px;
+
+    height: 20px;
+
+    cursor: pointer;
+
+}
+
+
+.completed {
+
+    opacity: 0.55;
+
+    text-decoration:
+        line-through;
+
+}
+
+
+/* ADD TASK */
+
+.add-section {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+}
+
+
+#task-input {
+
+    flex: 1;
+
+}
+
+
+button {
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding:
+        12px 18px;
+
+    cursor: pointer;
+
+    background: #2e2b33;
+
+    color: white;
+
+    font-size: 14px;
+
+}
+
+
+.delete-button {
+
+    background: transparent;
+
+    color: #c66;
+
+    padding: 5px;
+
+    font-size: 18px;
+
+}
+
+
+/* SUBJECTS */
+
+.subject {
+
+    margin-top: 20px;
+
+}
+
+
+.subject-header {
+
+    display: flex;
+
+    justify-content:
+        space-between;
+
+    margin-bottom: 8px;
+
+}
+
+
+.mini-progress {
+
+    height: 8px;
+
+    background: #eee;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+}
+
+
+.mini-progress div {
+
+    height: 100%;
+
+    width: 0%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #c9a7e8,
+            #f4a7a7
+        );
+
+    transition:
+        width 0.4s;
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+    text-align: center;
+
+    color: #999;
+
+    font-size: 13px;
+
+    margin-top: 35px;
+
+}
+
+
+/* MOBILE */
+
+@media (
+    max-width: 600px
+) {
+
+    .stats-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .input-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    h1 {
+
+        font-size: 40px;
+
+    }
+
 }
