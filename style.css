@@ -1,72 +1,34 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #fdf6f0, #f3e8f5);
-    color: #333;
+.progress-section {
+    margin-bottom: 25px;
 }
 
-.container {
-    max-width: 600px;
-    margin: 60px auto;
-    padding: 40px 25px;
-    text-align: center;
-}
-
-.tag {
-    font-size: 13px;
-    letter-spacing: 2px;
-    color: #8b6f7d;
-    margin-bottom: 15px;
-}
-
-h1 {
-    font-size: 42px;
-    margin: 0;
-    color: #2f2f35;
-    line-height: 1.2;
-}
-
-.subtitle {
-    font-size: 17px;
-    color: #777;
-    margin-top: 20px;
-    margin-bottom: 35px;
-}
-
-.habit-box {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.habit {
-    background: rgba(255, 255, 255, 0.75);
-    padding: 18px 20px;
-    border-radius: 16px;
-
+.progress-text {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin-bottom: 10px;
 
-    font-size: 17px;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
-
-    transition: 0.3s;
-}
-
-.habit:hover {
-    transform: translateY(-3px);
-}
-
-.habit-check {
-    width: 22px;
-    height: 22px;
-    cursor: pointer;
-}
-
-.footer {
-    margin-top: 35px;
     font-size: 14px;
-    color: #888;
+    color: #666;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+
+    background: rgba(255, 255, 255, 0.7);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+}
+
+#progress-fill {
+    height: 100%;
+    width: 0%;
+
+    background: linear-gradient(90deg, #ff9a9e, #fecfef);
+
+    border-radius: 20px;
+
+    transition: width 0.4s ease;
 }
